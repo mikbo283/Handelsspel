@@ -1,22 +1,12 @@
-#########################
-# customise these
-CFILES := main.cc ship.cc item.cc nation.cc harbour.cc person.cc
-PROG := prog
-CFLAGS := -std=c++14 -Wall -Wextra -g
-LDFLAGS :=
-########################
+src = $(wildcard *.cc)
+obj = $(src:.c=.o)
 
-# -MMD generates dependencies while compiling
-CFLAGS += -MMD
-CC := g++
+CC:= g++
+LDFLAGS = -Wall -std=c++11 -w
 
-OBJFILES := $(CFILES:.cc=.o)
-DEPFILES := $(CFILES:.cc=.d)
+MerchantAdventures: $(obj)
+	$(CC) -o $@ $^ $(LDFLAGS)
 
-$(PROG) : $(OBJFILES)
-	$(LINK.o) $(LDFLAGS) -o $@ $^
-
-clean :
-	rm -f $(PROG) $(OBJFILES) $(DEPFILES)
-
--include $(DEPFILES)
+.PHONY: clean
+clean:
+	rm -f $(obj) myprog

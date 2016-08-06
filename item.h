@@ -17,13 +17,13 @@ private:
 public:
 	Item(const unsigned& weight , const unsigned& price);
 
-	unsigned get_price();
+	virtual unsigned get_price() = 0;
 
-	unsigned get_weight();
+	virtual unsigned get_weight() = 0;
 
-	void set_weight(const unsigned&);
+	virtual void set_weight(const unsigned&) = 0;
 
-	void set_price(const unsigned&);
+	virtual void set_price(const unsigned&) = 0;
 
 };
 

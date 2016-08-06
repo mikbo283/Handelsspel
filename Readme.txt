@@ -1,1 +1,2 @@
-Spelet som skall härska över alla andra spel! 
+
+Build by issuing make
