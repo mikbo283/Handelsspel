@@ -1,5 +1,5 @@
 #include "ship.h"
-
+#include "person.h"
 
 
 Ship::Ship(const Person& owner,
@@ -8,7 +8,7 @@ Ship::Ship(const Person& owner,
 	   const unsigned& carry_capacity,
 	   const unsigned& durability,
 	   const unsigned& crew) :
-	owner_ {owner} ,
+	owner_ {owner}  ,
 	name_{name} ,
 	speed_{speed} ,
 	carry_capacity_{carry_capacity},
