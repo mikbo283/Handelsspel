@@ -1,15 +1,15 @@
 #include "harbour.h"
 
 Harbour::Harbour() {
-	this -> ducats = rand() % 10000;
+	ducats_ = rand() % 10000;
 }
 
 
 void  Harbour::set_ducats(const unsigned& ducats) {
-	this -> ducats = ducats;
+        ducats_  = ducats;
 }
 
 int Harbour::get_ducats() {
-	return ducats;
+	return ducats_;
 }
 

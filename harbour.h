@@ -13,7 +13,7 @@ using namespace std;
 class Harbour {
 
 private:
-	int ducats;
+	int ducats_;
 
 public:
 	Harbour();
