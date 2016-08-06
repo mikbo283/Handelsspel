@@ -11,24 +11,19 @@ using namespace std;
 class Item {
 
 private:
-	unsigned weight;
-	unsigned price;
+	unsigned weight_;
+	unsigned price_;
 
 public:
-	Item() {
-		weight = 0;
-		price = 0;
-	}
+	Item(const unsigned& weight , const unsigned& price);
 
+	unsigned get_price();
 
+	unsigned get_weight();
 
-	unsigned get_price() {
-		return price;
-	}
+	void set_weight(const unsigned&);
 
-	void set_price(const unsigned new_price) {
-		price = new_price;
-	}
+	void set_price(const unsigned&);
 
 };
 

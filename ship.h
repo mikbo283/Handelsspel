@@ -15,67 +15,41 @@ using std::string;
 class Ship {
 
 private:
-Person owner;
-string name;
-	unsigned speed;
-	unsigned carry_capacity;
-	unsigned durability;
-	unsigned crew;
+	Person owner_;
+	string name_;
+	unsigned speed_;
+	unsigned carry_capacity_;
+	unsigned durability_;
+	unsigned crew_;
 
 public:
 
-	Ship() {
-		name = "Flying Duchman";
-		speed = 0;
-		carry_capacity = 0;
-		durability = 100;
-		crew = 0;
-	}
+	Ship (const Person& owner,
+	      const std::string& name,
+	      const unsigned& speed,
+	      const unsigned& carry_capacity,
+	      const unsigned& durability,
+	      const unsigned& crew); 
 
-	void set_name(const string& new_name) {
-		name = new_name;
-	}
+	void set_name(const string&);
+	
+	void set_speed(const unsigned&);
 
-	void set_speed(const unsigned& new_speed) {
-		speed = new_speed;
-	} 
+	void set_carry_capacity(const unsigned&);
 
-	void set_carry_capacity(const unsigned& new_carry_capacity) {
-		carry_capacity = new_carry_capacity;
-	} 
+	void set_durability(const unsigned&);
 
-void set_durability(const unsigned& new_durbility) {
-durability = new_durbility;
-} 
+	void set_crew(const unsigned&);
 
-void set_crew(const unsigned& new_crew) {
-crew = new_crew;
-} 
+	string get_name();
 
+	unsigned get_speed();
 
+	unsigned get_carry_capacity();
 
-string get_name() {
-return name;
-}
+	unsigned get_durability();
 
-
-unsigned get_speed() {
-return speed;
-}
-
-
-unsigned get_carry_capacity() {
-return carry_capacity;
-}
-
-
-unsigned get_durability() {
-return durability;
-}
-
-unsigned get_crew() {
-return crew;
-}
+	unsigned get_crew();
 
 };
 

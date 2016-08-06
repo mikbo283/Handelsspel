@@ -4,7 +4,7 @@
 
 class Nation {
 public:
-	virtual void sing_anthem() = 0;
+
 
 };
 

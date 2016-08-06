@@ -16,17 +16,11 @@ private:
 	int ducats;
 
 public:
-	Harbour() {
-		ducats =  rand() % 10000;
-	}
+	Harbour();
 
-	void set_ducats(const unsigned new_ducats) {
-		ducats = new_ducats;
-	} 
+	void set_ducats(const unsigned& ducats);
 
-	int get_ducats() {
-		return ducats;
-	}
+	int get_ducats();
 };
 
 #endif

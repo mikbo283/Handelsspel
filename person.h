@@ -11,24 +11,20 @@ using std::string;
 
 class Person {
 private:
-	int ducats; 
-	string name;
+	int ducats_; 
+	std::string name_;
 
 public:
-  
-	void set_ducats(const int &new_ducats) {
-		this->ducats = ducats;
-	}
 
-	int get_ducats() {
-		return ducats;
-	}
+	Person(const int& ducats , const std::string& name);
 	
-	void set_name(const string &name) {
-		this->name = name;
-	}
+	void set_ducats(const int &new_ducats);
+
+	int get_ducats();
 	
-	
+	void set_name(const string &name);	
+
+	std::string get_name();
 	
 };
 
